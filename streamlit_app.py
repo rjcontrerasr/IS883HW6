@@ -4,7 +4,7 @@ import os
 
 st.title("IS883_Homework6")
 
-prompt = st.text_input("Enter a prompt", "Today")
+prompt = st.text_input("Enter a prompt", "Boston is a")
 tokens = st.number_input("Enter number of output tokens, max 1000", min_value=1, max_value=1000, value=80)
 
 
