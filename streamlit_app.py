@@ -12,7 +12,7 @@ tokens = st.number_input("Enter number of output tokens, max 1000", min_value=1,
 generator = pipeline('text-generation', model='gpt2')
 
 ### Generate the answer to the question "Enter your prompt"
-response = generator(prompt, max_length=tokens, num_return_sequences=1, truncation=True)
+response = generator(prompt, max_length=tokens, temperature = 1.0, num_return_sequences=1, truncation=True)
 
 
 ### Display
@@ -23,3 +23,6 @@ st.write(
 
 ##References
 ##https://docs.streamlit.io/develop/api-reference/widgets/st.number_input
+##https://medium.com/@imisri1/how-to-set-sampling-temperature-for-gpt-models-762887df1fac
+##https://discuss.huggingface.co/t/why-cant-temperature-be-0-for-gpt2-and-gpt-neo/35583
+##https://github.com/huggingface/transformers/issues/2029
