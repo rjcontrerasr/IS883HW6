@@ -17,12 +17,12 @@ response2 = generator(prompt, max_length=tokens, temperature = 0.25, num_return_
 
 
 ### Display
-st.write("Response 1 *Creative but sound* :sunglasses:")
+st.write("Response 1 *Creative* :sunglasses:")
 st.write(
     response1[0]['generated_text']
 )
 
-st.write("Response 2 *Predictable* :sad:")
+st.write("Response 2 *Predictable* :disappointed:")
 st.write(
     response2[0]['generated_text']
 )
