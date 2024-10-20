@@ -13,7 +13,7 @@ generator = pipeline('text-generation', model='gpt2')
 
 ### Generate the answer to the question "Enter your prompt"
 response1 = generator(prompt, max_length=tokens, temperature = 0.85, num_return_sequences=1, truncation=True)
-response2 = generator(prompt, max_length=tokens, temperature = 0.25, num_return_sequences=3, truncation=True)
+response2 = generator(prompt, max_length=tokens, temperature = 0.25, num_return_sequences=1, truncation=True)
 
 
 ### Display
@@ -22,7 +22,7 @@ st.write(
     response1[0]['generated_text']
 )
 
-st.write("Response 2 *Predictable* :sunglasses:")
+st.write("Response 2 *Predictable* :sad:")
 st.write(
     response2[0]['generated_text']
 )
