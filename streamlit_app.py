@@ -5,7 +5,7 @@ import os
 st.title("IS883_Homework6")
 
 prompt = st.text_input("Enter a prompt", "Today")
-tokens = st.text_input("Enter number of output tokens", "80")
+tokens = st.number_input("Enter number of output tokens, max 1000", min_value=1, max_value=1000, value=80)
 
 
 ### Create a GPT2 generator pipeline
@@ -19,3 +19,7 @@ response = generator(prompt, max_length=tokens, num_return_sequences=1, truncati
 st.write(
     response[0]['generated_text']
 )
+
+
+##References
+##https://docs.streamlit.io/develop/api-reference/widgets/st.number_input
