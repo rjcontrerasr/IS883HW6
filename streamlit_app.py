@@ -12,14 +12,18 @@ tokens = st.number_input("Enter number of output tokens, max 1000", min_value=1,
 generator = pipeline('text-generation', model='gpt2')
 
 ### Generate the answer to the question "Enter your prompt"
-response = generator(prompt, max_length=tokens, temperature = 1.0, num_return_sequences=1, truncation=True)
+response1 = generator(prompt, max_length=tokens, temperature = 1.2, num_return_sequences=1, truncation=True)
+response2 = generator(prompt, max_length=tokens, temperature = 0.051, num_return_sequences=1, truncation=True)
 
 
 ### Display
 st.write(
-    response[0]['generated_text']
+    response1[0]['generated_text']
 )
 
+st.write(
+    response2[0]['generated_text']
+)
 
 ##References
 ##https://docs.streamlit.io/develop/api-reference/widgets/st.number_input
